@@ -3,9 +3,10 @@
 
 .logo {
   width: 600px;
-  position: relative;
+  position: fixed;
+  top: 100px;
+  left: 0;
   z-index: 3;
-  margin-top: 110px;
   -webkit-transform: rotateZ(-20deg);
   transform: rotateZ(-20deg);
   cursor: pointer;
@@ -67,7 +68,7 @@
     }
     .squig2 {
       fill: bisque;
-      stroke: azure;
+      stroke: burlywood;
     }
     .squig1 {
       fill: paleturquoise;
@@ -85,6 +86,17 @@
   right: 50px;
   font-size: 50px;
   max-width: 550px;
+  margin-top: 100px;
+
+  a {
+    color: blue;
+  }
+}
+
+.social-logo {
+  img {
+    max-width: 50px;
+  }
 }
 
 .back-vid { 
