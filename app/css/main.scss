@@ -1,0 +1,136 @@
+// bower:scss
+// endbower
+
+.logo {
+  width: 600px;
+  position: relative;
+  z-index: 3;
+  margin-top: 110px;
+  -webkit-transform: rotateZ(-20deg);
+  transform: rotateZ(-20deg);
+  cursor: pointer;
+
+  svg {
+    g {
+      path {
+        fill: white;
+      }
+
+      .squig1, .squig2 {
+        stroke-dasharray: 10;
+        animation: dash 45s linear;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  &:hover {
+    .s{
+      stroke-dasharray: 100;
+      animation: dash 10s linear;
+      animation-iteration-count: infinite;
+    }
+    .o {
+      fill: lightblue;
+    }
+    .f {
+      stroke-dasharray: 100;
+      animation: dash 10s linear;
+      animation-iteration-count: infinite;
+    }
+    .t {
+      fill: gold;
+    }
+    .period {
+      stroke-dasharray: 100;
+      animation: dash 10s linear;
+      animation-iteration-count: infinite;
+    }
+    .p {
+      fill: pink;
+    }
+    .l {
+      stroke-dasharray: 100;
+      animation: dash 10s linear;
+      animation-iteration-count: infinite;
+    }
+    .a {
+      fill: darkorange;
+    }
+    .c {
+      stroke-dasharray: 100;
+      animation: dash 10s linear;
+      animation-iteration-count: infinite;
+    }
+    .e {
+      fill: indianred;
+    }
+    .squig2 {
+      fill: bisque;
+      stroke: azure;
+    }
+    .squig1 {
+      fill: paleturquoise;
+      stroke: tomato;
+    }
+  }
+}
+
+.info {
+  position: relative;
+  z-index: 3;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 300;
+  float: right;
+  right: 50px;
+  font-size: 50px;
+  max-width: 550px;
+}
+
+.back-vid { 
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  transition: 1s opacity;
+}
+
+.back-scrim {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(250,250,250, 0.7);
+}
+
+.animate {
+  stroke-dasharray: 100;
+  animation: dash 15s linear;
+  animation-iteration-count: infinite;
+}
+
+.animate2 {
+  stroke-dasharray: 10;
+  animation: dash 45s linear;
+  animation-iteration-count: infinite;
+}
+
+.animate3 {
+  stroke-dasharray: 80;
+  animation: dash 55s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
