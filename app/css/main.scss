@@ -93,23 +93,39 @@
     color: blue;
   }
 
-  .open {
+  .open, .closed {
     position: relative;
+    margin-bottom: 100px;
 
     &:before {
-      content: 'OPENED';
       position: absolute;
-      top: -30px;
-      left: -220px;
+      top: -70px;
+      left: -140px;
       transform: rotateZ(30deg);
       -webkit-transform: rotateZ(30deg);
       border: 3px solid black;
       border-radius: 20px;
       padding: 6px 10px;
-      background: hotpink;
       color: white;
     }
-   } 
+   }
+
+   .open {
+    &:before {
+      content: 'SOON';
+      background: hotpink;
+    }
+   }
+
+   .closed {
+    position: relative;
+
+    &:before {
+      content: 'OVER';
+      left: -130px;
+      background: gainsboro;
+    }
+   }  
 }
 
 .social-logo {
@@ -132,18 +148,25 @@
     margin: 60px auto 0;
   }
 
+  h2 {
+    font-size: 1em;
+  }
+
   .info {
     float: none;
     right: 0;
     width: 90%;
     margin: 250px auto 0;
 
-    .open {
+    .open, .closed {
       margin-top: 200px;
+      margin-bottom: 100px;
 
       &:before {
         left: 5px;
         top: -120px;
+        transform: none;
+        -webkit-transform: none;
       }
     }
   }
